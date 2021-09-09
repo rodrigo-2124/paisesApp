@@ -1,1 +1,24 @@
-<p>sidebar works!</p>
+<h2>Búsquedas</h2>
+<hr>
+<ul class="list-group">
+    <!-- routerLinkActive="active" => "active" es una clase de bootstrap, routerLinkActive marca el link seleccionado -->
+    <!-- routerLink,  evita el refresh del navegador?-->
+    <li 
+        class="list-group-item"
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">
+        Buscar Pais
+    </li>
+    <li class="list-group-item"
+        routerLink="region"
+        routerLinkActive="active">
+        Por región
+    </li>
+    <li 
+        class="list-group-item"
+        routerLink="capital"
+        routerLinkActive="active">
+        Por capital
+    </li>
+</ul>
