@@ -4,7 +4,8 @@
     <input 
         type="text"
         name="termino"
-        placeholder="Buscar País"
+        [placeholder]="placeholder_input"
         class="form-control"
-        [(ngModel)]="termino">
+        [(ngModel)]="termino"
+        (input)="teclaPresionada($event)">
 </form>

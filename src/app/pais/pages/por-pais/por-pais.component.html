@@ -6,7 +6,9 @@
         <!-- onEnter, es solo el nombre del @output declarado en pais-input.component.ts -->
         <app-pais-input
             (onEnter)="buscar($event)"
-        ></app-pais-input>
+            (onDebounce)="sugerencias($event)"
+            [placeholder_input]="placeholder_input">
+        </app-pais-input>
     </div>
 </div>
 <hr>

@@ -1,1 +1,28 @@
-<p>por-capital works!</p>
+<h2>Por Capital</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- onEnter, es solo el nombre del @output declarado en pais-input.component.ts -->
+        <app-pais-input
+            (onEnter)="buscar($event)"
+            [placeholder_input]="placeholder_input">
+        </app-pais-input>
+    </div>
+</div>
+<hr>
+
+<div 
+    *ngIf="hayError"
+    class="alert alert-danger">
+    No se encontraron resultados con "{{termino}}"
+</div>
+
+<div 
+    *ngIf="paises.length>0"
+    class="row">
+    <div class="col">
+        <app-pais-table [paises]="paises"></app-pais-table>
+
+    </div>
+</div>

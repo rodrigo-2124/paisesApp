@@ -11,6 +11,7 @@ import { PaisService } from '../../services/pais.service';
 })
 export class PorPaisComponent  {
 
+  placeholder_input: string= 'Por Capital';
   termino: string= '';
   hayError: boolean= false;
   paises: Pais[]= [];
@@ -23,7 +24,7 @@ export class PorPaisComponent  {
     this.hayError= false;
     this.termino= event;
     console.log(this.termino);
-    this._paisService.buscar(this.termino).subscribe(resp=>{
+    this._paisService.buscarPais(this.termino).subscribe(resp=>{
       this.paises= resp;
       console.log(resp);
     }, (err)=>{
@@ -33,4 +34,7 @@ export class PorPaisComponent  {
     });
   }
  
+  sugerencias(event: string){
+    this.hayError= false;
+  }
 }
